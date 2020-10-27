@@ -13,5 +13,18 @@ int main()
 	std::cout << std::boolalpha;
 	std::cout << is_integer<unsigned>;
 	//std::cout << SignedInt<signed>::value;
+	
+	Odd o = getOddity(3);
+	switch (o)
+	{
+	case Odd::Odd:
+		std::cout << "it's Odd";
+		break;
+	case Odd::Even:
+		std::cout << "it's Even";
+		break;
+	default:
+		break;
+	}
 	return 0;
 }
