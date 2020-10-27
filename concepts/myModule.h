@@ -1,3 +1,6 @@
+#ifndef MYMODULE_H
+#define MYMODULE_H
+
 #include "SignedAndUnsignedInt.h"
 #include <stdexcept>
 
@@ -25,3 +28,5 @@ Odd getOddity(T x)
 	try { if (isOdd(x)) return Odd::Odd; return Odd::Even; } 
 	catch (const std::exception& e) { std::cout << e.what(); } 
 }
+
+#endif
