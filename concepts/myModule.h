@@ -11,9 +11,9 @@ enum class Odd{Odd,Even};
 template <typename T>
 bool isOdd(T x)
 {
-	if constexpr (is_integer<T>)  /*constexpr is primordial here otherwise, you will get an error: C2296 % illegal, left operand hat type T
-					                      for instance, if T is double then % doesn't work for this type. constexpr make that the if is coputed at compile 
-					                      time. is_integer<> is a concept then it's computed at compile time*/
+	if constexpr (is_integer<T>) [[likely]] 	/*constexpr is primordial here otherwise, you will get an error: C2296 % illegal, left operand hat type T
+					                 for instance, if T is double then % doesn't work for this type. constexpr make that if is computed at compile 
+					                 time. is_integer<> is a concept then it's computed at compile time*/
 	{
 		if (x % 2)
 			return true;
